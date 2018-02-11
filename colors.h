@@ -14,19 +14,19 @@
 union ColorRGB{
 
 	#if __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__
-    struct{
-      uint8_t offset;
-      uint8_t red;
-      uint8_t green;
-      uint8_t blue;
-    };
-  	#else
-    struct{
-      uint8_t blue;
-      uint8_t green;
-      uint8_t red;
-      uint8_t offset;
-    };
+	struct{
+		uint8_t offset;
+		uint8_t red;
+		uint8_t green;
+		uint8_t blue;
+	};
+	#else
+	struct{
+		uint8_t blue;
+		uint8_t green;
+		uint8_t red;
+		uint8_t offset;
+	};
 	#endif
 
     //0xOORRGGBB
@@ -53,17 +53,17 @@ union ColorRGB{
 union ColorHSV{
 
 	#if __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__
-    struct{
-      uint16_t hue;
-      uint8_t saturation;
-      uint8_t value;
-    };
-  #else
-    struct{
-      uint8_t value;
-      uint8_t saturation;
-      uint16_t hue;
-    };
+	struct{
+		uint16_t hue;
+		uint8_t saturation;
+		uint8_t value;
+	};
+	#else
+	struct{
+		uint8_t value;
+		uint8_t saturation;
+		uint16_t hue;
+	};
 	#endif
 
 	  //0xHHHHSSVV
